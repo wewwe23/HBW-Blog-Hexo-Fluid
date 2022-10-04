@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: HanBiWolf Blog
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
+author: HanBiWolf
+language: zh-CN
 timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
+url: https://www.hanbiwolf.top/
+permalink: posts/:abbrlink/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -97,9 +97,67 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: fluid
+
+# abbrlink config
+abbrlink:
+  alg: crc32      #support crc16(default) and crc32
+  rep: dec        #support dec(default) and hex
+  drafts: false   #(true)Process draft,(false)Do not process draft. false(default)
+  # Generate categories from directory-tree
+  # depth: the max_depth of directory-tree you want to generate, should > 0
+  auto_category:
+    enable: false  #true(default)
+    depth:        #3(default)
+    over_write: false
+  auto_title: false #enable auto title, it can auto fill the title by path
+  auto_date: false #enable auto date, it can auto fill the date by time today
+  force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink. This only updates abbrlink rather than other front variables.
+
+feed:
+  enable: true
+  type:
+    - atom
+    - rss2
+  path:
+    - atom.xml
+    - rss2.xml
+  limit: 50
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  icon: icon.png
+  autodiscovery: true
+  template:
+
+hexo_submit_urls_to_search_engine:
+  submit_condition: count
+  count: 5
+  period: 900
+  google: 1
+  bing: 1
+  baidu: 0
+  txt_path: submit_urls.txt
+  baidu_host: https://www.hanbiwolf.top
+  baidu_token: 0
+  bing_host: https://www.hanbiwolf.top
+  bing_token: 0
+  google_host: https://www.hanbiwolf.top
+  google_key_file: GSC
+  google_proxy: 0
+  replace: 0
+  find_what: http://hanbiwolf.github.io/
+  replace_with: https://www.hanbiwolf.top
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  - type: cjh_google_url_submitter
+  - type: cjh_bing_url_submitter
+  - type: cjh_baidu_url_submitter
+  - type: 'git'
+    repo: git@github.com:HanBiWolf/HBW-Blog-Hexo-Fluid.git
+    branch: site
+
