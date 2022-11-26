@@ -26,7 +26,7 @@ apple_touch_icon: /img/favicon/favicon.png
 
 # 浏览器标签页中的标题分隔符，效果： 文章名 - 站点名
 # Title separator in browser tab, eg: article - site
-tab_title_separator: "|"
+tab_title_separator: " | "
 
 # 强制所有链接升级为 HTTPS（适用于图片等资源出现 HTTP 混入报错）
 # Force all links to be HTTPS (applicable to HTTP mixed error)
@@ -190,8 +190,8 @@ color:
 
   # 超链接悬浮时字体色
   # Color of link when hovering
-  link_hover_color: "#30a9de"
-  link_hover_color_dark: "#30a9de"
+  link_hover_color: "#ff8000"
+  link_hover_color_dark: "#ff8000"
 
   # 超链接悬浮背景色
   # Color of link background when hovering
@@ -424,10 +424,9 @@ footer:
   # 页脚第一行文字的 HTML，建议保留 Fluid 的链接，用于向更多人推广本主题
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
-    <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a>
-    <i class="iconfont icon-love"></i>
-    <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
-  '
+    COPYRIGHT © 2022 - NOW <a href="https://www.hanbiwolf.cc/" target="_blank" rel="nofollow noopener"><span>HanBiWolf</span></a>
+    <br><a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> - <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
+    '
 
   # 展示网站的 PV、UV 统计数
   # Display website PV and UV statistics
@@ -1022,8 +1021,9 @@ links:
   # 友链下方自定义区域，支持 HTML，可插入例如申请友链的文字
   # Custom content at the bottom of the links
   custom:
-    enable: false
-    content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>'
+    enable: true
+    content: '<hr><p>暂不接受友链,除非我们很熟(</p>'
+    #content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://hexo.fluid-dev.com</li><li>图片：https://hexo.fluid-dev.com/img/favicon.png</li></ul>'
 
   # 评论插件
   # Comment plugin

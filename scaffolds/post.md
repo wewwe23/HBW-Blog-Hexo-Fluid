@@ -4,6 +4,7 @@ date: {{ date }}
 tags:
 index_img:
 banner_img:
-comment: true
-author:
+category:
+hide:
+comment:
 ---
