@@ -232,10 +232,15 @@ font:
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js:
+  - /js/backgroundline.js
+  - /js/funtitle.js
+  - /js/alivetime.js
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
 custom_css:
+  - /css/background.css
+  - /css/backgroundline.css
 
 # 网页访问统计
 # Analysis of website visitors
@@ -425,6 +430,7 @@ footer:
   # HTML of the first line of the footer, it is recommended to keep the Fluid link to promote this theme to more people
   content: '
     COPYRIGHT © 2022 - NOW <a href="https://www.hanbiwolf.cc/" target="_blank" rel="nofollow noopener"><span>HanBiWolf</span></a>
+    <br><span id="timeDate">存活天数载入中</span><span id="times">...</span><br>
     <br><a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> - <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
     '
 
@@ -459,7 +465,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: img/background/background.jpg
+  banner_img: img/background/none.png
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -469,7 +475,7 @@ index:
   # 头图黑色蒙版的不透明度，available: 0 - 1.0， 1 是完全不透明
   # Opacity of the banner mask, 1.0 is completely opaque
   # Available: 0 - 1.0
-  banner_mask_alpha: 0.3
+  banner_mask_alpha: 0.0
 
   # 首页副标题的独立设置
   # Independent config of home page subtitle
