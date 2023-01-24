@@ -136,8 +136,8 @@ hexo_submit_urls_to_search_engine:
   submit_condition: count
   count: 5
   period: 900
-  google: 1
-  bing: 1
+  google: 0
+  bing: 0
   baidu: 0
   txt_path: submit_urls.txt
   baidu_host: https://www.hanbiwolf.top
@@ -157,4 +157,8 @@ deploy:
   - type: cjh_google_url_submitter
   - type: cjh_bing_url_submitter
   - type: cjh_baidu_url_submitter
+  - type: git
+    repo: git@github.com:HanBiWolf/HBW-Blog-Hexo-Fluid.git
+    branch: public
+
 

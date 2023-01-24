@@ -1,11 +1,9 @@
 
-name: Auto Deploy
+name: Auto Generate Public Folder
 
 on:
   push:
     branches: [ "main" ]
-  schedule:
-    - cron: '0 23 * * *'
   workflow_dispatch:
 
 jobs:
@@ -16,9 +14,6 @@ jobs:
       GPG_PRIVATE: ${{ secrets.GPG_PRIVATE }}
       GPG_PUBLIC: ${{ secrets.GPG_PUBLIC }}
       ID_RSA: ${{ secrets.ID_RSA }}
-      GSC: ${{ secrets.GSC }}
-      BAIDU_TOKEN: ${{ secrets.BAIDU_TOKEN }}
-      BING_TOKEN: ${{ secrets.BING_TOKEN }}
 
     steps:
       - name: Checkout Source
@@ -62,10 +57,6 @@ jobs:
           gpg --import ./HBWBlog_public.asc
           echo "$GPG_PRIVATE" > ./HBWBlog_SECRET.asc
           gpg --allow-secret-key-import --import ./HBWBlog_SECRET.asc
-
-      - name: Import Google Search Console Key File
-        run: |
-          echo "$GSC" > ./GSC.json
 
       - name: Set Git Config
         run: |
