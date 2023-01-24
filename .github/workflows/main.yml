@@ -60,7 +60,7 @@ jobs:
 
       - name: Set Git Config
         run: |
-          git config --global user.signingkey 97A9D9296CEB5FFAAF55D0810DEA2E2E1CFB8000
+          git config --global user.signingkey 639E5BBFD1BD91F55CE2E4AD7E758A5681EE3578
           git config --global init.defaultBranch main
           git config --global commit.gpgsign true
           git config --global user.email "hanbiwolf@outlook.com"
