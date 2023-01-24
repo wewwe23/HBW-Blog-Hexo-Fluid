@@ -132,31 +132,31 @@ feed:
   autodiscovery: true
   template:
 
-hexo_submit_urls_to_search_engine:
-  submit_condition: count
-  count: 5
-  period: 900
-  google: 0
-  bing: 0
-  baidu: 0
-  txt_path: submit_urls.txt
-  baidu_host: https://www.hanbiwolf.top
-  baidu_token: 0
-  bing_host: https://www.hanbiwolf.top
-  bing_token: 0
-  google_host: https://www.hanbiwolf.top
-  google_key_file: GSC
-  google_proxy: 0
-  replace: 0
-  find_what: http://hanbiwolf.github.io/
-  replace_with: https://www.hanbiwolf.top
+#hexo_submit_urls_to_search_engine:
+#  submit_condition: count
+#  count: 5
+#  period: 900
+#  google: 0
+#  bing: 0
+#  baidu: 0
+#  txt_path: submit_urls.txt
+#  baidu_host: https://www.hanbiwolf.top
+#  baidu_token: 0
+#  bing_host: https://www.hanbiwolf.top
+#  bing_token: 0
+#  google_host: https://www.hanbiwolf.top
+#  google_key_file: GSC
+#  google_proxy: 0
+#  replace: 0
+#  find_what: http://hanbiwolf.github.io/
+#  replace_with: https://www.hanbiwolf.top
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  - type: cjh_google_url_submitter
-  - type: cjh_bing_url_submitter
-  - type: cjh_baidu_url_submitter
+#  - type: cjh_google_url_submitter
+#  - type: cjh_bing_url_submitter
+#  - type: cjh_baidu_url_submitter
   - type: git
     repo: git@github.com:HanBiWolf/HBW-Blog-Hexo-Fluid.git
     branch: public
